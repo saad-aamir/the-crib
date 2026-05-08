@@ -4,24 +4,24 @@ import { useEffect, useState } from "react";
 
 const reviews = [
   {
-    q: "We came for a weekend and stayed for five nights. The fireplace, the linen sheets, the way the morning fog settles into the pines — none of it photographs the way it feels.",
+    q: "We came for a weekend and stayed five nights. The cinema room, the chaaye station, the way the morning fog settles into the pines — none of it photographs the way it feels.",
     n: "Ayesha & Hamza",
-    m: "Stayed in Cedar House · April",
+    m: "Stayed in The Corner Apartment · April",
   },
   {
-    q: "Quietest sleep I've had in years. Whoever stocked the kitchen knows their way around good food. Already booked again for autumn.",
+    q: "Quietest sleep I've had in years. Carom till midnight, pakoras at 11, a cup of karak in hand. Already booked again for autumn.",
     n: "Daniyal R.",
-    m: "Stayed in Pine Loft · March",
+    m: "Stayed in The Corner Apartment · March",
   },
   {
     q: "A genuinely thoughtful place. The kind of stay that makes you reconsider what hotels are even for.",
     n: "Sara K.",
-    m: "Stayed in Cedar House · February",
+    m: "Stayed in The Budget Apartment · February",
   },
   {
-    q: "Felt like staying in a friend's beautifully kept second home. We left rested, and that's rare.",
+    q: "Felt like staying in a friend's beautifully kept second home. The host replied in minutes, and we left rested — that's rare.",
     n: "Omar & Zara",
-    m: "Stayed in Pine Loft · January",
+    m: "Stayed in The Budget Apartment · January",
   },
 ];
 

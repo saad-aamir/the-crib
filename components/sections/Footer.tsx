@@ -11,18 +11,18 @@ export default function Footer() {
           <div>
             <h5>The Crib</h5>
             <p className="f-blurb">
-              A boutique stay of two apartments in the deodar pines of Murree.
-              Quiet by design, kept like a home.
+              Two bespoke hillside apartments above Murree. A private cinema, a game room,
+              and the warmth of a lived-in home — open year-round.
             </p>
           </div>
           <div>
             <h5>Visit</h5>
             <ul>
               <li>
-                <a href="#apartments">Cedar House</a>
+                <a href="#apartments">The Corner Apartment</a>
               </li>
               <li>
-                <a href="#apartments">Pine Loft</a>
+                <a href="#apartments">The Budget Apartment</a>
               </li>
               <li>
                 <a href="#location">Location</a>

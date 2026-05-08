@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 
 const items = [
-  "Boutique",
-  "Slow living",
+  "Private cinema",
+  "Game room",
+  "Chaaye station",
   "Forest views",
   "Two apartments",
-  "Deodar pines",
-  "Quiet luxury",
+  "Year-round stays",
 ];
 
 function Block() {

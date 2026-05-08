@@ -38,8 +38,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero-tagline reveal reveal-d2">
-            Two boutique apartments tucked into the deodar forests of Murree.
-            For long mornings, slow conversations, and the kind of rest that lingers.
+            Two bespoke hillside apartments above Murree — open year-round
+            for slow, quiet stays above the trees, with a private cinema
+            and game room reserved for guests.
           </p>
           <Magnetic strength={0.3}>
             <a href="#contact" className="btn btn-light reveal reveal-d3">

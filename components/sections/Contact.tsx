@@ -30,8 +30,8 @@ export default function Contact() {
             </h2>
             <p>
               We keep bookings personal — no third-party platforms, no surprise fees.
-              Send us your dates and we&apos;ll reply within the day with availability,
-              a small welcome note, and any local recommendations for your stay.
+              Send us your dates and we&apos;ll reply within 30 minutes with availability,
+              a small welcome note, and thoughtful local recommendations for your stay.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
               <div className="small-title">Send an inquiry</div>
               <h3>Reserve your stay.</h3>
               <div className="sub">
-                A quick note is enough. Share your dates and we&apos;ll reply within the day.
+                A quick note is enough. Share your dates and we&apos;ll reply within 30 minutes.
               </div>
 
               <div className="c-fieldgrid">
@@ -107,7 +107,7 @@ export default function Contact() {
                   <label>Which apartment</label>
                   <input
                     type="text"
-                    placeholder="Cedar House · Pine Loft · Either"
+                    placeholder="The Corner Apartment · The Budget Apartment · Either"
                   />
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   <span className="arrow">→</span>
                 </button>
                 <div className="c-form-note">
-                  We reply within 24 hours, often sooner.
+                  We reply within 30 minutes, often sooner.
                 </div>
               </div>
             </form>

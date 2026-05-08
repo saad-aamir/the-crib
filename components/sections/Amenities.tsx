@@ -2,7 +2,55 @@ import { ReactNode } from "react";
 
 const items: { t: string; d: string; icon: ReactNode }[] = [
   {
-    t: "Fibre Wi-Fi",
+    t: "Chaaye Station",
+    d: "Karak chaaye, coffee, and comforting cups whenever the weather asks for one.",
+    icon: (
+      <path
+        d="M5 8h12v8a4 4 0 01-4 4H9a4 4 0 01-4-4V8zM17 10h2a2 2 0 010 4h-2M9 4v2M12 3v3M15 4v2"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        fill="none"
+      />
+    ),
+  },
+  {
+    t: "Game Room",
+    d: "Carom battles, ludo marathons, and board games that turn into long evenings.",
+    icon: (
+      <path
+        d="M4 6h16v12H4zM4 6l16 12M20 6L4 18"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        fill="none"
+      />
+    ),
+  },
+  {
+    t: "Private Cinema",
+    d: "Movie nights with hot pakoras and the kind of evenings you talk about long after.",
+    icon: (
+      <path
+        d="M3 6h18v12H3zM3 9h18M6 6V4M10 6V4M14 6V4M18 6V4M6 18v2M10 18v2M14 18v2M18 18v2"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        fill="none"
+      />
+    ),
+  },
+  {
+    t: "Concierge",
+    d: "A real person on call — late-night essentials, recommendations, even pakoras from the stall across the road.",
+    icon: (
+      <path
+        d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5M12 12a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        fill="none"
+      />
+    ),
+  },
+  {
+    t: "High-Speed Wi-Fi",
     d: "Fast enough for a workday, quiet enough to forget you have one.",
     icon: (
       <path
@@ -15,7 +63,7 @@ const items: { t: string; d: string; icon: ReactNode }[] = [
   },
   {
     t: "Full Kitchen",
-    d: "Stocked with fresh oils, cast iron, and good knives.",
+    d: "Fully equipped — for slow breakfasts, shared meals, and everything in between.",
     icon: (
       <path
         d="M5 3v18M5 7h14M19 3v18M9 12h6M14 12v9M10 12V3"
@@ -26,11 +74,11 @@ const items: { t: string; d: string; icon: ReactNode }[] = [
     ),
   },
   {
-    t: "Private Parking",
-    d: "Tucked behind cedar trees. Your car, out of sight.",
+    t: "Daily Housekeeping",
+    d: "Fresh linens on request and the apartment kept the way you arrived to it.",
     icon: (
       <path
-        d="M5 17V8h7a4 4 0 010 8H8M5 17H3M5 17h2M19 17h2M16 17h-2"
+        d="M5 21l3-12 4 1-3 12zM12 10l4-8M16 2l3 1.5M19 3.5l-2 4M14 6l-2 4"
         stroke="currentColor"
         strokeWidth="1.2"
         fill="none"
@@ -38,61 +86,11 @@ const items: { t: string; d: string; icon: ReactNode }[] = [
     ),
   },
   {
-    t: "Mountain View",
-    d: "Pir Panjal range on a clear morning. Fog on the others.",
+    t: "Forest Views",
+    d: "Floor-to-ceiling windows opening to deodar pines and the stillness above the trees.",
     icon: (
       <path
         d="M3 19l5-9 4 7 3-5 6 7H3z"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        fill="none"
-      />
-    ),
-  },
-  {
-    t: "Wood Fireplace",
-    d: "Logs split fresh, kindling waiting beside the hearth.",
-    icon: (
-      <path
-        d="M12 21c-3 0-5-2-5-5 0-3 3-3 3-7 0-2 2-3 2-3s4 4 4 8c0 4-2 7-4 7z"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        fill="none"
-      />
-    ),
-  },
-  {
-    t: "Outdoor Patio",
-    d: "For breakfasts in the sun and after-dinner whisky.",
-    icon: (
-      <path
-        d="M12 4l-9 9h3v7h12v-7h3l-9-9zM10 20v-5h4v5"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        fill="none"
-      />
-    ),
-  },
-  {
-    t: "Filter Coffee",
-    d: "Beans roasted in Islamabad, ground for you each morning.",
-    icon: (
-      <path
-        d="M5 8h12v8a4 4 0 01-4 4H9a4 4 0 01-4-4V8zM17 10h2a2 2 0 010 4h-2M9 4v2M12 3v3M15 4v2"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        fill="none"
-      />
-    ),
-  },
-  {
-    t: "Concierge",
-    d: "A real person, on call, for whatever the day needs.",
-    icon: (
-      <circle
-        cx="12"
-        cy="9"
-        r="3.5"
         stroke="currentColor"
         strokeWidth="1.2"
         fill="none"
@@ -116,8 +114,9 @@ export default function Amenities() {
             <h2 className="reveal reveal-d1">Small details, kept properly.</h2>
           </div>
           <p className="reveal reveal-d2">
-            Everything you&apos;d want, and nothing you wouldn&apos;t. We&apos;ve stocked
-            both apartments the way we&apos;d stock our own home — slowly, with intention.
+            Board games, warm lighting, movie nights in the private cinema, and quiet corners
+            made for long conversations after dinner — everything stocked the way we&apos;d
+            stock our own home.
           </p>
         </div>
         <div className="amenities-grid">

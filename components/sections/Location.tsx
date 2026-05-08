@@ -1,7 +1,12 @@
 const cells = [
   {
+    label: "Gloria Jean's, Chaaye Khaana, Coffee Bean",
+    dist: "2 min walk",
+    img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
     label: "The Mall Road",
-    dist: "15 min drive",
+    dist: "15 min drive · expressway",
     img: "https://placehold.co/1200x800/2B4A39/F5EFE6/png?text=Mall+Road",
   },
   {
@@ -13,11 +18,6 @@ const cells = [
     label: "Ayubia National Park",
     dist: "40 min drive",
     img: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    label: "Pindi Point",
-    dist: "20 min walk",
-    img: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

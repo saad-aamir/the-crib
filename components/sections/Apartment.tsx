@@ -15,17 +15,17 @@ export type ApartmentData = {
 export const APARTMENTS: ApartmentData[] = [
   {
     num: "01",
-    name: "Cedar House",
+    name: "The Corner Apartment",
     sub: "The forest-facing retreat",
     desc:
-      "A two-bedroom hideaway wrapped in deodar wood and morning mist. Floor-to-ceiling windows frame the pines; a stone fireplace anchors the living room. Sleeps four, designed for stillness.",
+      "A three-bedroom corner apartment with a warm, comfortable lounge and a fully equipped kitchen. Floor-to-ceiling windows open toward the pines, filling the space with light and stillness. Designed for slow mornings, quiet evenings, and effortless stays. Reserved access to a game and cinema room.",
     features: [
-      "2 Bedrooms",
-      "Stone fireplace",
-      "Forest balcony",
-      "Rain shower",
-      "Filter coffee bar",
-      "Sleeps 4",
+      "3 Bedrooms",
+      "Game room & private cinema",
+      "Forest-view balcony",
+      "Chaaye station",
+      "Fully equipped kitchen",
+      "Sleeps 9",
     ],
     images: [
       "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?auto=format&fit=crop&w=1600&q=80",
@@ -36,17 +36,17 @@ export const APARTMENTS: ApartmentData[] = [
   },
   {
     num: "02",
-    name: "Pine Loft",
-    sub: "A loft above the canopy",
+    name: "The Budget Apartment",
+    sub: "The comfortable family apartment",
     desc:
-      "A vaulted-ceiling studio set high among the trees, dressed in linen, oak and brass. A reading nook by the window seat, a soaking tub by candlelight. Sleeps two, made for slow mornings.",
+      "Ideal for smaller families and intimate stays, with thoughtfully designed interiors, a fully furnished lounge, and everything needed for a relaxed getaway. Restricted views, but the warmth of the space more than makes up for it. Easier on the pocket.",
     features: [
-      "1 Bedroom",
-      "Soaking tub",
+      "2 Bedrooms · 2 Washrooms",
+      "Fully furnished lounge & TV",
       "Reading nook",
-      "Vaulted ceiling",
-      "Espresso bar",
-      "Sleeps 2",
+      "Chaaye station",
+      "Fully equipped kitchen",
+      "Sleeps 6",
     ],
     images: [
       "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",

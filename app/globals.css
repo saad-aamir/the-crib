@@ -1093,3 +1093,71 @@ body.anim-off .marquee-track { animation: none; }
 @media (max-width: 600px) {
   .twk-panel { width: calc(100vw - 32px); }
 }
+
+/* ── Section dividers ───────────────────────────────────── */
+.sec-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  position: relative;
+}
+.sec-divider-line {
+  flex: 1;
+  min-width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--gold) 30%,
+    var(--gold) 70%,
+    transparent 100%
+  );
+  opacity: 0.55;
+}
+.sec-divider-mark {
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-divider-mark svg {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+.sec-divider.is-ink .sec-divider-mark { color: var(--ink-soft); }
+.sec-divider.is-gold .sec-divider-mark { color: var(--gold); }
+.sec-divider-label {
+  flex-basis: 100%;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+/* Alternating tonal backgrounds, very subtle */
+.tone-warm {
+  background: var(--cream-deep);
+  background-image:
+    radial-gradient(
+      ellipse at top,
+      rgba(184, 137, 90, 0.04) 0%,
+      transparent 60%
+    );
+}
+
+@media (max-width: 700px) {
+  .sec-divider { padding: 40px 20px; gap: 20px; }
+  .sec-divider-mark { height: 32px; }
+  .sec-divider-line { min-width: 40px; }
+}

@@ -15,6 +15,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Pricing from "@/components/sections/Pricing";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import SectionDivider from "@/components/SectionDivider";
 import { useReveal, useParallax } from "@/components/hooks";
 import {
   AnimLevel,
@@ -47,14 +48,24 @@ export default function Page() {
         <Hero />
         <Intro />
         <Marquee />
-        <section id="apartments">
+        <section id="apartments" className="tone-warm">
+          <SectionDivider variant="tree" />
           <Apartment data={APARTMENTS[0]} />
           <Apartment data={APARTMENTS[1]} flip />
         </section>
+        <SectionDivider variant="ludo" />
         <Amenities />
-        <Location />
+        <div className="tone-warm">
+          <SectionDivider variant="mountain" />
+          <Location />
+        </div>
+        <SectionDivider variant="wreath" />
         <Testimonials />
-        <Pricing />
+        <div className="tone-warm">
+          <SectionDivider variant="half-wreath" />
+          <Pricing />
+        </div>
+        <SectionDivider variant="lights" />
         <Contact />
         <Footer />
       </main>
