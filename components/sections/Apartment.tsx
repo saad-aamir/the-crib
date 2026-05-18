@@ -1,7 +1,13 @@
 "use client";
 
 import { ReactNode, useState } from "react";
+import Image from "next/image";
 import Magnetic from "../Magnetic";
+
+export type RoomData = {
+  name: string;
+  images: string[];
+};
 
 export type ApartmentData = {
   num: string;
@@ -9,7 +15,7 @@ export type ApartmentData = {
   sub: string;
   desc: string;
   features: string[];
-  images: string[];
+  rooms: RoomData[];
 };
 
 export const APARTMENTS: ApartmentData[] = [
@@ -27,11 +33,71 @@ export const APARTMENTS: ApartmentData[] = [
       "Fully equipped kitchen",
       "Sleeps 9",
     ],
-    images: [
-      "https://images.unsplash.com/photo-1518733057094-95b53143d2a7?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    rooms: [
+      {
+        name: "Lounge",
+        images: [
+          "/apartments/corner/lounge/20260514_152506.jpg",
+          "/apartments/corner/lounge/20260514_152536.jpg",
+          "/apartments/corner/lounge/20260514_152558.jpg",
+          "/apartments/corner/lounge/20260514_152620.jpg",
+          "/apartments/corner/lounge/20260514_152639.jpg",
+          "/apartments/corner/lounge/20260514_152706.jpg",
+        ],
+      },
+      {
+        name: "Game Room",
+        images: [
+          "/apartments/corner/game-room/20260514_163607.jpg",
+          "/apartments/corner/game-room/20260514_163623.jpg",
+          "/apartments/corner/game-room/20260514_163628.jpg",
+          "/apartments/corner/game-room/20260514_163644.jpg",
+        ],
+      },
+      {
+        name: "Room 1",
+        images: [
+          "/apartments/corner/room-1/20260514_154720.jpg",
+          "/apartments/corner/room-1/20260514_154755.jpg",
+          "/apartments/corner/room-1/20260514_154812.jpg",
+          "/apartments/corner/room-1/20260514_154842.jpg",
+          "/apartments/corner/room-1/20260514_154848.jpg",
+          "/apartments/corner/room-1/20260514_154917.jpg",
+          "/apartments/corner/room-1/20260514_155056.jpg",
+          "/apartments/corner/room-1/20260514_155235.jpg",
+          "/apartments/corner/room-1/20260514_155325.jpg",
+        ],
+      },
+      {
+        name: "Room 2",
+        images: [
+          "/apartments/corner/room-2/20260514_161055.jpg",
+          "/apartments/corner/room-2/20260514_161109.jpg",
+          "/apartments/corner/room-2/20260514_161159.jpg",
+          "/apartments/corner/room-2/20260514_161246.jpg",
+        ],
+      },
+      {
+        name: "Room 3",
+        images: [
+          "/apartments/corner/room-3/20260514_163055.jpg",
+          "/apartments/corner/room-3/20260514_163132.jpg",
+          "/apartments/corner/room-3/20260514_163145.jpg",
+          "/apartments/corner/room-3/20260514_163247.jpg",
+          "/apartments/corner/room-3/20260514_163320.jpg",
+          "/apartments/corner/room-3/20260514_163354.jpg",
+        ],
+      },
+      {
+        name: "Balcony",
+        images: [
+          "/apartments/corner/balcony/Balcony-301.jpg",
+          "/apartments/corner/balcony/Balcony-1-301.jpg",
+          "/apartments/corner/balcony/Balcony-3-301.jpg",
+          "/apartments/corner/balcony/Balcony-4-301.jpg",
+          "/apartments/corner/balcony/Balcony-5-301.jpg",
+        ],
+      },
     ],
   },
   {
@@ -48,11 +114,55 @@ export const APARTMENTS: ApartmentData[] = [
       "Fully equipped kitchen",
       "Sleeps 6",
     ],
-    images: [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80",
+    rooms: [
+      {
+        name: "Lounge",
+        images: [
+          "/apartments/budget/lounge/20260514_132208.jpg",
+          "/apartments/budget/lounge/20260514_132228.jpg",
+          "/apartments/budget/lounge/20260514_132254.jpg",
+          "/apartments/budget/lounge/20260514_132307.jpg",
+          "/apartments/budget/lounge/20260514_132314.jpg",
+          "/apartments/budget/lounge/20260514_132328.jpg",
+          "/apartments/budget/lounge/20260514_132337.jpg",
+          "/apartments/budget/lounge/20260514_132411.jpg",
+          "/apartments/budget/lounge/20260514_132414.jpg",
+        ],
+      },
+      {
+        name: "Kitchen",
+        images: [
+          "/apartments/budget/kitchen/20260514_132426.jpg",
+          "/apartments/budget/kitchen/20260514_132450.jpg",
+          "/apartments/budget/kitchen/20260514_132453.jpg",
+          "/apartments/budget/kitchen/20260514_132456.jpg",
+        ],
+      },
+      {
+        name: "Room 1",
+        images: [
+          "/apartments/budget/room-1/20260514_122411.jpg",
+          "/apartments/budget/room-1/20260514_124312.jpg",
+          "/apartments/budget/room-1/20260514_124322.jpg",
+          "/apartments/budget/room-1/20260514_124529.jpg",
+          "/apartments/budget/room-1/20260514_124546.jpg",
+          "/apartments/budget/room-1/20260514_124638.jpg",
+          "/apartments/budget/room-1/20260514_124652.jpg",
+          "/apartments/budget/room-1/20260514_124722.jpg",
+          "/apartments/budget/room-1/20260514_124759.jpg",
+        ],
+      },
+      {
+        name: "Room 2",
+        images: [
+          "/apartments/budget/room-2/20260514_125410.jpg",
+          "/apartments/budget/room-2/20260514_125429.jpg",
+          "/apartments/budget/room-2/20260514_125450.jpg",
+          "/apartments/budget/room-2/20260514_125516.jpg",
+          "/apartments/budget/room-2/20260514_125553.jpg",
+          "/apartments/budget/room-2/20260514_125657.jpg",
+        ],
+      },
     ],
   },
 ];
@@ -115,10 +225,13 @@ export default function Apartment({
   data: ApartmentData;
   flip?: boolean;
 }) {
+  const [roomIdx, setRoomIdx] = useState(0);
   const [idx, setIdx] = useState(0);
-  const total = data.images.length;
-  const next = () => setIdx((idx + 1) % total);
-  const prev = () => setIdx((idx - 1 + total) % total);
+  const activeRoom = data.rooms[roomIdx];
+  const total = activeRoom.images.length;
+  const next = () => setIdx((i) => (i + 1) % total);
+  const prev = () => setIdx((i) => (i - 1 + total) % total);
+  const switchRoom = (i: number) => { setRoomIdx(i); setIdx(0); };
 
   return (
     <section className={`apt ${flip ? "flip" : ""}`}>
@@ -150,13 +263,34 @@ export default function Apartment({
             </Magnetic>
           </div>
           <div className="apt-media reveal reveal-d2">
+            {data.rooms.length > 1 && (
+              <div className="apt-room-tabs">
+                {data.rooms.map((room, i) => (
+                  <button
+                    key={i}
+                    className={`apt-room-tab ${i === roomIdx ? "active" : ""}`}
+                    onClick={() => switchRoom(i)}
+                  >
+                    {room.name}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="apt-gallery">
-              {data.images.map((src, i) => (
+              {activeRoom.images.map((src, i) => (
                 <div
-                  key={i}
+                  key={`${roomIdx}-${i}`}
                   className={`slide ${i === idx ? "active" : ""}`}
-                  style={{ backgroundImage: `url(${src})` }}
-                />
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="(max-width: 880px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                    priority={i === 0}
+                  />
+                </div>
               ))}
               <div className="apt-counter">
                 {String(idx + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
@@ -183,13 +317,20 @@ export default function Apartment({
               </div>
             </div>
             <div className="apt-thumbs">
-              {data.images.map((src, i) => (
+              {activeRoom.images.map((src, i) => (
                 <div
-                  key={i}
+                  key={`${roomIdx}-${i}`}
                   className={`apt-thumb ${i === idx ? "active" : ""}`}
                   onClick={() => setIdx(i)}
-                  style={{ backgroundImage: `url(${src})` }}
-                />
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="120px"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
               ))}
             </div>
           </div>

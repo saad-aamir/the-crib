@@ -413,7 +413,6 @@ section { position: relative; }
 }
 .apt-gallery .slide {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
   opacity: 0; transition: opacity 1.2s var(--ease);
   will-change: transform;
 }
@@ -427,9 +426,9 @@ section { position: relative; }
   display: flex; gap: 10px; margin-top: 16px;
 }
 .apt-thumb {
-  flex: 1; aspect-ratio: 3/2; background-size: cover; background-position: center;
+  flex: 1; aspect-ratio: 3/2;
   opacity: .55; transition: opacity .4s var(--ease), transform .5s var(--ease);
-  position: relative;
+  position: relative; overflow: hidden;
 }
 .apt-thumb::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
@@ -468,6 +467,34 @@ section { position: relative; }
   .apt.flip .apt-grid > .apt-text { order: 2; }
   .apt-text { padding: 0; }
 }
+
+/* ── Apartment room tabs ────────────────────────────────── */
+.apt-room-tabs {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+  gap: 0;
+}
+.apt-room-tabs::-webkit-scrollbar { display: none; }
+.apt-room-tab {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  white-space: nowrap;
+  color: var(--mute);
+  border-bottom: 1.5px solid transparent;
+  margin-bottom: -1px;
+  transition: color .3s var(--ease), border-color .3s var(--ease);
+}
+.apt-room-tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+.apt-room-tab:hover:not(.active) { color: var(--ink-soft); }
 
 /* ── Amenities ──────────────────────────────────────────── */
 .amenities {
