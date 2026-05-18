@@ -36,7 +36,7 @@ export default function Testimonials() {
     <section className="testimonials" id="reviews">
       <div className="wrap">
         <div className="t-head reveal">
-          <div className="eyebrow">Chapter 04 · The Guests</div>
+          <div className="eyebrow">Chapter 03 · The Guests</div>
           <h2>Words from those who&apos;ve stayed.</h2>
         </div>
         <div className="t-stage">

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 const items: { t: string; d: string; icon: ReactNode }[] = [
   {
-    t: "Chaaye Station",
+    t: "Chaye & Coffee Station",
     d: "Karak chaaye, coffee, and comforting cups whenever the weather asks for one.",
     icon: (
       <path
@@ -39,7 +39,7 @@ const items: { t: string; d: string; icon: ReactNode }[] = [
   },
   {
     t: "Concierge",
-    d: "A real person on call — late-night essentials, recommendations, even pakoras from the stall across the road.",
+    d: "A real person on call for late-night essentials and to help you get food from numerous restaurants nearby.",
     icon: (
       <path
         d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5M12 12a3.5 3.5 0 100-7 3.5 3.5 0 000 7z"

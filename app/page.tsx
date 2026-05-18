@@ -55,10 +55,6 @@ export default function Page() {
         </section>
         <SectionDivider variant="ludo" />
         <Amenities />
-        <div className="tone-warm">
-          <SectionDivider variant="mountain" />
-          <Location />
-        </div>
         <SectionDivider variant="wreath" />
         <Testimonials />
         <div className="tone-warm">

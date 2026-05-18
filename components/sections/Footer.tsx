@@ -2,11 +2,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="wrap">
-        <div className="f-mark reveal">
-          The Crib
-          <br />
-          <em>Murree Hills</em>
-        </div>
         <div className="f-grid">
           <div>
             <h5>The Crib</h5>
@@ -19,13 +14,10 @@ export default function Footer() {
             <h5>Visit</h5>
             <ul>
               <li>
-                <a href="#apartments">The Corner Apartment</a>
+                <a href="#apartments">The Grand Suite</a>
               </li>
               <li>
-                <a href="#apartments">The Budget Apartment</a>
-              </li>
-              <li>
-                <a href="#location">Location</a>
+                <a href="#apartments">The Essentials Suite</a>
               </li>
               <li>
                 <a href="#pricing">Rates</a>
@@ -35,15 +27,15 @@ export default function Footer() {
           <div>
             <h5>Contact</h5>
             <ul>
-              <li>+92 321 627 8382</li>
-              <li>thecrib@gmail.com</li>
+              <li>+92 306 544 0665</li>
+              <li>thecribmurree@gmail.com</li>
               <li>Murree, Pakistan</li>
             </ul>
           </div>
           <div>
             <h5>Follow</h5>
             <div className="f-social">
-              <a href="#" aria-label="Instagram">
+              <a href="https://instagram.com/thecribmurree" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                   <rect
                     x="3"
@@ -64,7 +56,7 @@ export default function Footer() {
                   <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
                 </svg>
               </a>
-              <a href="#" aria-label="Facebook">
+              <a href="https://facebook.com/thecribmurree" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M14 8h2V5h-2a3 3 0 00-3 3v2H9v3h2v8h3v-8h2.5l.5-3H14V8.5c0-.3.2-.5.5-.5z"
