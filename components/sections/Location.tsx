@@ -2,12 +2,12 @@ const cells = [
   {
     label: "Gloria Jean's, Chaaye Khaana, Coffee Bean",
     dist: "2 min walk",
-    img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+    img: "/vicinity-cafe.jpg",
   },
   {
     label: "The Mall Road",
     dist: "15 min drive · expressway",
-    img: "https://placehold.co/1200x800/2B4A39/F5EFE6/png?text=Mall+Road",
+    img: "/mall-road.jpg",
   },
   {
     label: "Patriata Chairlift",
