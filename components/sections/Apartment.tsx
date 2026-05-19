@@ -206,7 +206,7 @@ export default function Apartment({ data, flip = false }: { data: ApartmentData;
                 </div>
               ))}
             </div>
-            <Magnetic strength={0.25}>
+            <Magnetic strength={0.25} className="apt-cta">
               <a href="#contact" className="btn">
                 <span>Reserve {data.name}</span>
                 <span className="arrow">→</span>

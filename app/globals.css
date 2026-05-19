@@ -518,8 +518,8 @@ section { position: relative; }
   gap: 80px;
   align-items: start;
 }
-.apt.flip .apt-grid > .apt-media { order: 2; }
-.apt.flip .apt-grid > .apt-text { order: 1; }
+.apt.flip .apt-grid > .apt-media { order: 1; }
+.apt.flip .apt-grid > .apt-text { order: 2; }
 
 .apt-text { padding: 0 20px; }
 .apt-num {
@@ -630,11 +630,13 @@ section { position: relative; }
 
 @media (max-width: 880px) {
   .apt-grid { grid-template-columns: 1fr; gap: 40px; }
-  /* Always show text first on mobile regardless of flip */
-  .apt.flip .apt-grid > .apt-media { order: 2; }
-  .apt.flip .apt-grid > .apt-text { order: 1; }
+  /* Revert flip on mobile — text always first (DOM order) */
+  .apt.flip .apt-grid > .apt-media { order: unset; }
+  .apt.flip .apt-grid > .apt-text { order: unset; }
   .apt-text { padding: 0; }
-  .apt-text .btn { margin-bottom: 8px; }
+  /* Make CTA button full-width so it doesn't bleed into room tabs */
+  .apt-cta { display: block !important; width: 100%; margin-bottom: 0; }
+  .apt-cta .btn { width: 100%; justify-content: center; }
 }
 
 /* ── Apartment room tabs ────────────────────────────────── */
@@ -1355,10 +1357,10 @@ section { position: relative; }
   /* Testimonials */
   .testimonials { padding: 70px 0; }
   .t-head { margin-bottom: 40px; }
-  .t-quote-mark { font-size: 60px; }
-  .t-quote { font-size: clamp(18px, 5vw, 26px); }
-  .t-card { padding: 0 4px; }
-  .t-stage { min-height: 460px; }
+  .t-quote-mark { font-size: 56px; line-height: 1; margin-bottom: 8px; }
+  .t-quote { font-size: clamp(17px, 5vw, 24px); }
+  .t-card { padding: 20px 4px 0; }
+  .t-stage { min-height: 480px; overflow: visible; }
 
   /* Pricing */
   .pricing { padding: 70px 0; }
