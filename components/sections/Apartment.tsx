@@ -206,14 +206,10 @@ export default function Apartment({ data, flip = false }: { data: ApartmentData;
                 </div>
               ))}
             </div>
-            <div className="apt-cta">
-              <Magnetic strength={0.25}>
-                <a href="#contact" className="btn">
-                  <span>Reserve {data.name}</span>
-                  <span className="arrow">→</span>
-                </a>
-              </Magnetic>
-            </div>
+            <a href="#contact" className="btn apt-cta">
+              <span>Reserve {data.name}</span>
+              <span className="arrow">→</span>
+            </a>
           </div>
 
           <div className="apt-media reveal reveal-d2">

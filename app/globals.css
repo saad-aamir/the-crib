@@ -634,8 +634,8 @@ section { position: relative; }
   .apt.flip .apt-grid > .apt-media { order: unset; }
   .apt.flip .apt-grid > .apt-text { order: unset; }
   .apt-text { padding: 0; }
-  /* CTA is a block div — button fills full width on mobile */
-  .apt-cta .btn { width: 100%; justify-content: center; display: flex; }
+  /* Button full-width on mobile, clearly separated from gallery */
+  .apt-cta { display: flex !important; width: 100%; justify-content: center; }
 }
 
 /* ── Apartment room tabs ────────────────────────────────── */
