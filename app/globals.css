@@ -1365,11 +1365,18 @@ section { position: relative; }
   /* Testimonials */
   .testimonials { padding: 70px 0; overflow: visible; }
   .t-head { margin-bottom: 40px; }
-  .t-quote-mark { font-size: 48px; line-height: 1.5; margin-bottom: 8px; }
+  .t-quote-mark {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    line-height: 1;
+    margin: 0;
+  }
   .t-quote { font-size: clamp(17px, 5vw, 24px); }
-  .t-card { padding-top: 56px; }
-  .t-stage { min-height: 520px; overflow: visible; }
-  .testimonials, .t-stage, .t-card { overflow: visible !important; }
+  .t-card { padding: 0 24px; }
+  .t-stage { position: relative; min-height: 440px; overflow: visible; }
 
   /* Pricing */
   .pricing { padding: 70px 0; }
