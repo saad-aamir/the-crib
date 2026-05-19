@@ -634,9 +634,8 @@ section { position: relative; }
   .apt.flip .apt-grid > .apt-media { order: unset; }
   .apt.flip .apt-grid > .apt-text { order: unset; }
   .apt-text { padding: 0; }
-  /* Make CTA button full-width so it doesn't bleed into room tabs */
-  .apt-cta { display: block !important; width: 100%; margin-bottom: 0; }
-  .apt-cta .btn { width: 100%; justify-content: center; }
+  /* CTA is a block div — button fills full width on mobile */
+  .apt-cta .btn { width: 100%; justify-content: center; display: flex; }
 }
 
 /* ── Apartment room tabs ────────────────────────────────── */
@@ -1355,11 +1354,11 @@ section { position: relative; }
   .amenity:nth-child(4n) { border-right: none; }
 
   /* Testimonials */
-  .testimonials { padding: 70px 0; }
+  .testimonials { padding: 70px 0; overflow: visible; }
   .t-head { margin-bottom: 40px; }
   .t-quote-mark { font-size: 56px; line-height: 1; margin-bottom: 8px; }
   .t-quote { font-size: clamp(17px, 5vw, 24px); }
-  .t-card { padding: 20px 4px 0; }
+  .t-card { padding: 24px 4px 0; }
   .t-stage { min-height: 480px; overflow: visible; }
 
   /* Pricing */
