@@ -629,10 +629,12 @@ section { position: relative; }
 .apt-arrows button:hover { background: var(--cream); transform: translateY(-2px); }
 
 @media (max-width: 880px) {
-  .apt-grid { grid-template-columns: 1fr; gap: 50px; }
-  .apt.flip .apt-grid > .apt-media { order: 1; }
-  .apt.flip .apt-grid > .apt-text { order: 2; }
+  .apt-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* Always show text first on mobile regardless of flip */
+  .apt.flip .apt-grid > .apt-media { order: 2; }
+  .apt.flip .apt-grid > .apt-text { order: 1; }
   .apt-text { padding: 0; }
+  .apt-text .btn { margin-bottom: 8px; }
 }
 
 /* ── Apartment room tabs ────────────────────────────────── */
@@ -961,6 +963,8 @@ section { position: relative; }
 @media (max-width: 880px) {
   .pr-grid { grid-template-columns: 1fr; }
   .pr-card { padding: 36px 28px; }
+  .pr-tag { position: static; display: block; margin-bottom: 10px; text-align: left; }
+  .pr-card .name { font-size: 28px; }
 }
 
 /* ── Contact ────────────────────────────────────────────── */
@@ -1337,6 +1341,7 @@ section { position: relative; }
   .apt-feat { font-size: 11px; gap: 10px; }
   .apt-feat svg { width: 18px; height: 18px; }
   .apt-room-tab { font-size: 9px; padding: 9px 10px; letter-spacing: 0.16em; }
+  .apt-room-tabs { margin-top: 4px; }
   .apt-gallery { aspect-ratio: 4 / 3; } /* less tall on mobile */
   .apt-thumbs { height: 54px; }
 
