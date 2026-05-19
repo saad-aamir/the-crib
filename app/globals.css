@@ -629,13 +629,22 @@ section { position: relative; }
 .apt-arrows button:hover { background: var(--cream); transform: translateY(-2px); }
 
 @media (max-width: 880px) {
-  .apt-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* Switch to flexbox column — avoids any grid gap rendering issues */
+  .apt-grid { display: flex; flex-direction: column; gap: 0; }
+  .apt-text { padding: 0; padding-bottom: 40px; }
+  .apt-media { width: 100%; }
   /* Revert flip on mobile — text always first (DOM order) */
   .apt.flip .apt-grid > .apt-media { order: unset; }
   .apt.flip .apt-grid > .apt-text { order: unset; }
-  .apt-text { padding: 0; }
-  /* Button full-width on mobile, clearly separated from gallery */
-  .apt-cta { display: flex !important; width: 100%; justify-content: center; }
+  /* Filled solid button on mobile — visually impossible to confuse with tab labels */
+  .apt-cta {
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
 }
 
 /* ── Apartment room tabs ────────────────────────────────── */
@@ -1342,7 +1351,7 @@ section { position: relative; }
   .apt-feat { font-size: 11px; gap: 10px; }
   .apt-feat svg { width: 18px; height: 18px; }
   .apt-room-tab { font-size: 9px; padding: 9px 10px; letter-spacing: 0.16em; }
-  .apt-room-tabs { margin-top: 4px; }
+  .apt-room-tabs { margin-top: 0; padding-top: 4px; }
   .apt-gallery { aspect-ratio: 4 / 3; } /* less tall on mobile */
   .apt-thumbs { height: 54px; }
 
