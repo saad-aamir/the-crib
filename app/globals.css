@@ -1365,7 +1365,7 @@ section { position: relative; }
   /* Testimonials */
   .testimonials { padding: 70px 0; overflow: visible; }
   .t-head { margin-bottom: 40px; }
-  .t-quote-mark { font-size: 56px; line-height: 1; margin-bottom: 8px; }
+  .t-quote-mark { display: none; }
   .t-quote { font-size: clamp(17px, 5vw, 24px); }
   .t-card { padding: 24px 4px 0; }
   .t-stage { min-height: 480px; overflow: visible; }
