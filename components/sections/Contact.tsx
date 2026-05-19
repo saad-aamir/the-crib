@@ -7,9 +7,35 @@ const BG =
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
-  const submit = (e: FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError("");
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      checkin: (form.elements.namedItem("checkin") as HTMLInputElement).value,
+      checkout: (form.elements.namedItem("checkout") as HTMLInputElement).value,
+      apartment: (form.elements.namedItem("apartment") as HTMLInputElement).value,
+      note: (form.elements.namedItem("note") as HTMLTextAreaElement).value,
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setError("Something went wrong — please email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -99,22 +125,22 @@ export default function Contact() {
               <div className="c-fieldgrid">
                 <div className="field">
                   <label>Your name</label>
-                  <input type="text" required placeholder="Full name" />
+                  <input name="name" type="text" required placeholder="Full name" />
                 </div>
                 <div className="field">
                   <label>Email</label>
-                  <input type="email" required placeholder="you@email.com" />
+                  <input name="email" type="email" required placeholder="you@email.com" />
                 </div>
               </div>
 
               <div className="c-fieldgrid">
                 <div className="field">
                   <label>Check-in</label>
-                  <input type="date" required />
+                  <input name="checkin" type="date" required />
                 </div>
                 <div className="field">
                   <label>Check-out</label>
-                  <input type="date" required />
+                  <input name="checkout" type="date" required />
                 </div>
               </div>
 
@@ -122,6 +148,7 @@ export default function Contact() {
                 <div className="field">
                   <label>Which apartment</label>
                   <input
+                    name="apartment"
                     type="text"
                     placeholder="The Grand Suite · The Essentials Suite · Either"
                   />
@@ -131,19 +158,19 @@ export default function Contact() {
               <div className="c-fieldgrid full">
                 <div className="field">
                   <label>A short note</label>
-                  <textarea placeholder="Guests, occasion, dietary notes — anything that helps us prepare." />
+                  <textarea name="note" placeholder="Guests, occasion, dietary notes — anything that helps us prepare." />
                 </div>
               </div>
 
               <div className="c-form-foot">
-                <button type="submit">
+                <button type="submit" disabled={loading || sent}>
                   <span>
-                    {sent ? "Thank you — we'll be in touch" : "Send inquiry"}
+                    {sent ? "Thank you — we'll be in touch" : loading ? "Sending…" : "Send inquiry"}
                   </span>
-                  <span className="arrow">→</span>
+                  {!sent && <span className="arrow">→</span>}
                 </button>
                 <div className="c-form-note">
-                  We reply within 30 minutes, often sooner.
+                  {error ? error : "We reply within 30 minutes, often sooner."}
                 </div>
               </div>
             </form>

@@ -879,8 +879,19 @@ section { position: relative; }
 .t-author .meta { opacity: .7; }
 .t-stars { color: var(--gold-soft); margin-bottom: 24px; letter-spacing: 6px; }
 
+.t-nav {
+  display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 50px;
+}
+.t-arrow {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(245,239,230,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--cream); transition: background .3s var(--ease), border-color .3s;
+  flex-shrink: 0;
+}
+.t-arrow:hover { background: rgba(245,239,230,0.12); border-color: rgba(245,239,230,0.5); }
 .t-dots {
-  display: flex; gap: 12px; justify-content: center; margin-top: 50px;
+  display: flex; gap: 12px; justify-content: center;
 }
 .t-dot {
   width: 32px; height: 1px; background: rgba(245,239,230,.25);
@@ -1096,6 +1107,14 @@ section { position: relative; }
 }
 .field input::placeholder, .field textarea::placeholder { color: rgba(245,239,230,0.3); }
 .field input:focus, .field textarea:focus { border-color: var(--gold-soft); }
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  box-shadow: 0 0 0 1000px transparent inset;
+  -webkit-text-fill-color: var(--cream);
+  transition: background-color 9999s ease-in-out 0s;
+}
 .field input[type="date"] { color-scheme: dark; }
 .field textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
 

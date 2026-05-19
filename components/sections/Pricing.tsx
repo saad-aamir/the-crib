@@ -20,7 +20,7 @@ export default function Pricing() {
                 The forest-facing retreat
               </em>
             </div>
-            <div className="pr-mute">Three bedrooms · forest balcony</div>
+            <div className="pr-mute">Three bedrooms · three bathrooms · forest balcony</div>
             <div className="pr-rate">
               <span className="currency">PKR</span>
               <span className="num">38,000</span>

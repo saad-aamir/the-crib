@@ -1,36 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const reviews = [
   {
     q: "We came for a weekend and stayed five nights. The cinema room, the chaaye station, the way the morning fog settles into the pines — none of it photographs the way it feels.",
     n: "Ayesha & Hamza",
-    m: "Stayed in The Corner Apartment · April",
+    m: "Stayed in The Grand Suite · April",
   },
   {
     q: "Quietest sleep I've had in years. Carom till midnight, pakoras at 11, a cup of karak in hand. Already booked again for autumn.",
     n: "Daniyal R.",
-    m: "Stayed in The Corner Apartment · March",
+    m: "Stayed in The Grand Suite · March",
   },
   {
     q: "A genuinely thoughtful place. The kind of stay that makes you reconsider what hotels are even for.",
     n: "Sara K.",
-    m: "Stayed in The Budget Apartment · February",
+    m: "Stayed in The Essentials Suite · February",
   },
   {
     q: "Felt like staying in a friend's beautifully kept second home. The host replied in minutes, and we left rested — that's rare.",
     n: "Omar & Zara",
-    m: "Stayed in The Budget Apartment · January",
+    m: "Stayed in The Essentials Suite · January",
   },
 ];
 
 export default function Testimonials() {
   const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % reviews.length), 6500);
-    return () => clearInterval(t);
-  }, []);
 
   return (
     <section className="testimonials" id="reviews">
@@ -53,14 +49,26 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-        <div className="t-dots">
-          {reviews.map((_, i) => (
-            <div
-              key={i}
-              className={`t-dot ${i === idx ? "active" : ""}`}
-              onClick={() => setIdx(i)}
-            />
-          ))}
+        <div className="t-nav">
+          <button className="t-arrow" onClick={() => setIdx((idx - 1 + reviews.length) % reviews.length)} aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </button>
+          <div className="t-dots">
+            {reviews.map((_, i) => (
+              <div
+                key={i}
+                className={`t-dot ${i === idx ? "active" : ""}`}
+                onClick={() => setIdx(i)}
+              />
+            ))}
+          </div>
+          <button className="t-arrow" onClick={() => setIdx((idx + 1) % reviews.length)} aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
