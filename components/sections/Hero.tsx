@@ -43,7 +43,7 @@ export default function Hero() {
           Ideally located on Murree Expressway above Chaaye Khaana · 45 mins from Islamabad
         </p>
         <p className="hero-cream-body">
-          Two bespoke hillside apartments open year-round for slow, quiet stays above the trees, with a private cinema and game room reserved for guests.
+          Two bespoke hillside apartments open year-round for slow, quiet stays above the trees, with a soon to come private cinema room and game room reserved for guests.
         </p>
         <Magnetic strength={0.3}>
           <a href="#contact" className="btn">

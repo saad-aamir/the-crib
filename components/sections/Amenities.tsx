@@ -26,7 +26,7 @@ const items: { t: string; d: string; icon: ReactNode }[] = [
     ),
   },
   {
-    t: "Private Cinema",
+    t: "Soon to Come Private Cinema Room",
     d: "Movie nights with hot pakoras and the kind of evenings you talk about long after.",
     icon: (
       <path
@@ -114,7 +114,7 @@ export default function Amenities() {
             <h2 className="reveal reveal-d1">Small details, kept properly.</h2>
           </div>
           <p className="reveal reveal-d2">
-            Board games, warm lighting, movie nights in the private cinema, and quiet corners
+            Board games, warm lighting, movie nights in the soon to come private cinema room, and quiet corners
             made for long conversations after dinner — everything stocked the way we&apos;d
             stock our own home.
           </p>

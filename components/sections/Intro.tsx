@@ -7,7 +7,7 @@ export default function Intro() {
           Two bespoke hillside apartments, designed with the warmth and privacy of a lived-in home.
         </h2>
         <p className="reveal reveal-d2">
-          Open year-round for slow, quiet stays above the trees, this retreat offers a one-of-a-kind game room and private cinema — perfect for carom battles, ludo marathons, movie nights, hot pakoras, and the kind of evenings you'll keep talking about long after the trip is over.
+          Open year-round for slow, quiet stays above the trees, this retreat offers a one-of-a-kind game room and soon to come private cinema room — perfect for carom battles, ludo marathons, movie nights, hot pakoras, and the kind of evenings you'll keep talking about long after the trip is over.
         </p>
         <p className="reveal reveal-d3" style={{ marginTop: "24px" }}>
           Set right on the expressway, it's close to all the main attractions, cafés, and Mall Road, yet far enough from the rush, traffic, and noise that usually come with it.

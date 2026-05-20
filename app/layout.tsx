@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "The Crib · Murree Hills — A boutique stay in the pines",
   description:
-    "Two bespoke hillside apartments above Murree — open year-round for slow, quiet stays above the trees, with a private cinema and game room reserved for guests.",
+    "Two bespoke hillside apartments above Murree — open year-round for slow, quiet stays above the trees, with a soon to come private cinema room and game room reserved for guests.",
 };
 
 export const viewport: Viewport = {

@@ -29,7 +29,7 @@ export const APARTMENTS: ApartmentData[] = [
     descHighlight: "Reserved access to a game and a cinema room.",
     features: [
       "3 Bedrooms",
-      "Game room & private cinema",
+      "Game room & soon to come private cinema room",
       "Forest-view balcony",
       "Chaye and coffee station",
       "Fully equipped kitchen",

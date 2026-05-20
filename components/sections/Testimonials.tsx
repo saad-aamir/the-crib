@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const reviews = [
   {
-    q: "We came for a weekend and stayed five nights. The cinema room, the chaaye station, the way the morning fog settles into the pines — none of it photographs the way it feels.",
+    q: "We came for a weekend and stayed five nights. The chaaye station, the way the morning fog settles into the pines — none of it photographs the way it feels.",
     n: "Ayesha & Hamza",
     m: "Stayed in The Grand Suite · April",
   },

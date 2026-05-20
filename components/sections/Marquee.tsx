@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 const items = [
-  "Private cinema",
+  "Soon to come private cinema room",
   "Game room",
   "Chaye & coffee station",
   "Forest views",

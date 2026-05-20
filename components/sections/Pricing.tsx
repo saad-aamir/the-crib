@@ -27,7 +27,7 @@ export default function Pricing() {
               <span className="per">/ night</span>
             </div>
             <ul className="pr-list">
-              <li>Reserved access to the game room & private cinema</li>
+              <li>Reserved access to the game room & soon to come private cinema room</li>
               <li>Two Expansive forest-view balcony</li>
               <li>Chaye & coffee station · fully equipped kitchen</li>
               <li>Concierge & daily housekeeping</li>

@@ -6,7 +6,7 @@ export default function Footer() {
           <div>
             <h5>The Crib</h5>
             <p className="f-blurb">
-              Two bespoke hillside apartments above Murree. A private cinema, a game room,
+              Two bespoke hillside apartments above Murree. A soon to come private cinema room, a game room,
               and the warmth of a lived-in home — open year-round.
             </p>
           </div>
