@@ -571,7 +571,7 @@ section { position: relative; }
 }
 .apt-gallery {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 4;
   overflow: hidden;
   background: var(--cream-deep);
 }
@@ -587,7 +587,7 @@ section { position: relative; }
 }
 .apt-thumbs {
   display: flex; gap: 10px; margin-top: 16px;
-  height: 68px; /* fixed — never changes regardless of thumb count */
+  height: 100px;
 }
 .apt-thumb {
   flex: 1; height: 100%;
@@ -1348,7 +1348,7 @@ section { position: relative; }
   .apt-room-tab { font-size: 9px; padding: 9px 10px; letter-spacing: 0.16em; }
   .apt-room-tabs { margin-top: 0; padding-top: 4px; }
   .apt-gallery { aspect-ratio: 4 / 3; } /* less tall on mobile */
-  .apt-thumbs { height: 54px; }
+  .apt-thumbs { height: 78px; }
 
   /* Amenities */
   .amenities { padding: 70px 0; }
