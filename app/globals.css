@@ -138,15 +138,14 @@ section { position: relative; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 999;
   padding: 22px 40px;
   display: flex; align-items: center; justify-content: space-between;
-  transition: background .5s var(--ease), padding .4s var(--ease), border-color .4s;
+  transition: background .5s var(--ease), padding .4s var(--ease), box-shadow .5s var(--ease);
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(245, 239, 230, 0.88);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: var(--cream);
+  box-shadow: 0 1px 0 var(--line), 0 4px 28px rgba(31, 61, 46, 0.07);
   padding: 14px 40px;
-  border-bottom-color: var(--line);
+  border-bottom-color: transparent;
 }
 .nav.light { color: var(--cream); }
 .nav.light .nav-link::after { background: var(--cream); }
@@ -461,7 +460,6 @@ section { position: relative; }
   border: 1px solid currentColor;
   position: relative; overflow: hidden;
   transition: color .5s var(--ease);
-  will-change: transform;
 }
 .btn::before {
   content: ''; position: absolute; inset: 0;
@@ -580,7 +578,6 @@ section { position: relative; }
 .apt-gallery .slide {
   position: absolute; inset: 0;
   opacity: 0; transition: opacity 0.7s var(--ease);
-  will-change: opacity;
 }
 .apt-gallery .slide.active { opacity: 1; }
 .apt-gallery::after {
@@ -608,8 +605,7 @@ section { position: relative; }
 
 .apt-counter {
   position: absolute; top: 20px; right: 20px;
-  background: rgba(245,239,230,.85);
-  backdrop-filter: blur(8px);
+  background: rgba(245,239,230,.92);
   padding: 8px 14px;
   font-size: 11px; letter-spacing: 0.18em; font-weight: 500;
   color: var(--ink);
@@ -620,8 +616,7 @@ section { position: relative; }
 }
 .apt-arrows button {
   width: 44px; height: 44px;
-  background: rgba(245,239,230,.85);
-  backdrop-filter: blur(8px);
+  background: rgba(245,239,230,.92);
   display: flex; align-items: center; justify-content: center;
   color: var(--ink);
   transition: background .3s, transform .3s var(--ease);

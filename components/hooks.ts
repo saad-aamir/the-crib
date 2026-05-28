@@ -57,20 +57,27 @@ export function useMagnetic(strength = 0.35) {
     if (!el) return;
     if (matchMedia("(hover: none)").matches) return;
     if (document.body.classList.contains("anim-off")) return;
+    let cachedRect: DOMRect | null = null;
+    const invalidate = () => { cachedRect = null; };
     const move = (e: MouseEvent) => {
-      const r = el.getBoundingClientRect();
-      const x = e.clientX - (r.left + r.width / 2);
-      const y = e.clientY - (r.top + r.height / 2);
+      if (!cachedRect) cachedRect = el.getBoundingClientRect();
+      const x = e.clientX - (cachedRect.left + cachedRect.width / 2);
+      const y = e.clientY - (cachedRect.top + cachedRect.height / 2);
       el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
     };
     const leave = () => {
       el.style.transform = "";
+      cachedRect = null;
     };
     el.addEventListener("mousemove", move);
     el.addEventListener("mouseleave", leave);
+    window.addEventListener("scroll", invalidate, { passive: true });
+    window.addEventListener("resize", invalidate);
     return () => {
       el.removeEventListener("mousemove", move);
       el.removeEventListener("mouseleave", leave);
+      window.removeEventListener("scroll", invalidate);
+      window.removeEventListener("resize", invalidate);
     };
   }, [strength]);
   return ref;

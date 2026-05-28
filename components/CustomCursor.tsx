@@ -16,16 +16,11 @@ export default function CustomCursor() {
       ry = 0;
     const DARK_SELECTOR =
       ".hero, .testimonials, .contact, .footer, .loc-map, .pr-card.feature";
-    const move = (e: MouseEvent) => {
-      mx = e.clientX;
-      my = e.clientY;
-      const el = document.elementFromPoint(mx, my) as Element | null;
-      const isDark = !!el?.closest(DARK_SELECTOR);
-      document.body.classList.toggle("cursor-light", isDark);
-    };
-    window.addEventListener("mousemove", move);
+    let darkCheckFrame = 0;
     let raf = 0;
+
     const tick = () => {
+      raf = 0;
       dx += (mx - dx) * 0.85;
       dy += (my - dy) * 0.85;
       rx += (mx - rx) * 0.18;
@@ -34,9 +29,24 @@ export default function CustomCursor() {
         dot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%,-50%)`;
       if (ring)
         ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%)`;
-      raf = requestAnimationFrame(tick);
+      // Keep animating until ring has settled
+      if (Math.abs(mx - rx) > 0.5 || Math.abs(my - ry) > 0.5) {
+        raf = requestAnimationFrame(tick);
+      }
     };
-    tick();
+
+    const move = (e: MouseEvent) => {
+      mx = e.clientX;
+      my = e.clientY;
+      if (!raf) raf = requestAnimationFrame(tick);
+      // Throttle elementFromPoint — only check every 4th mousemove
+      darkCheckFrame = (darkCheckFrame + 1) % 4;
+      if (darkCheckFrame !== 0) return;
+      const el = document.elementFromPoint(mx, my) as Element | null;
+      const isDark = !!el?.closest(DARK_SELECTOR);
+      document.body.classList.toggle("cursor-light", isDark);
+    };
+    window.addEventListener("mousemove", move);
 
     const enter = (e: Event) => {
       const t = e.target as Element | null;
@@ -57,7 +67,7 @@ export default function CustomCursor() {
     document.addEventListener("mouseover", enter);
     document.addEventListener("mouseout", leave);
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf) cancelAnimationFrame(raf);
       window.removeEventListener("mousemove", move);
       document.removeEventListener("mouseover", enter);
       document.removeEventListener("mouseout", leave);
