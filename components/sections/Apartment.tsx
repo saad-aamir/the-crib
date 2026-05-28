@@ -79,7 +79,9 @@ export const APARTMENTS: ApartmentData[] = [
       {
         name: "Game Room",
         images: [
-          "/apartments/corner/game-room/20260514_163623.jpg",
+          "/apartments/corner/game-room/20260521_162151.jpg",
+          "/apartments/corner/game-room/20260521_161833.jpg",
+          "/apartments/corner/game-room/20260521_162123.jpg",
         ],
       },
     ],
