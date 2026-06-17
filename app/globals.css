@@ -1243,6 +1243,8 @@ section { position: relative; }
   font-family: var(--serif); font-style: italic; font-weight: 500;
   font-size: 28px; letter-spacing: -0.005em;
 }
+.marquee-track,
+.marquee-track > span { max-width: none; }
 .marquee-track > span { display: inline-flex; align-items: center; gap: 60px; }
 .marquee-track .dot {
   width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
