@@ -1255,6 +1255,237 @@ section { position: relative; }
 /* ── Selection ──────────────────────────────────────────── */
 ::selection { background: var(--ink); color: var(--cream); }
 
+/* ── Google Reviews ─────────────────────────────────────── */
+.google-reviews {
+  padding: 100px 0 90px;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.gr-head {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.gr-head .eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+
+.gr-heading {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;
+  margin-bottom: 36px;
+}
+
+.gr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 10px 20px 10px 14px;
+}
+
+.gr-badge-rating {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.gr-badge-stars {
+  color: #F4B400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.gr-badge-sep {
+  color: var(--mute);
+  font-size: 13px;
+}
+
+.gr-badge-count {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* Horizontal scroll strip */
+.gr-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+
+.gr-scroll::-webkit-scrollbar { display: none; }
+.gr-scroll:active { cursor: grabbing; }
+
+.gr-track {
+  display: flex;
+  gap: 20px;
+  padding: 4px 60px;
+  width: max-content;
+}
+
+/* Individual card */
+.gr-card {
+  flex: none;
+  width: 340px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.gr-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 36px rgba(31, 61, 46, 0.08);
+}
+
+.gr-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.gr-card-stars {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #F4B400;
+  line-height: 1;
+}
+
+.gr-card-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  flex: 1;
+  margin-bottom: 22px;
+}
+
+.gr-card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.gr-card-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  letter-spacing: 0;
+}
+
+.gr-card-name {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.gr-card-time {
+  font-size: 11px;
+  color: var(--mute);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gr-g {
+  display: block;
+  flex: none;
+}
+
+.gr-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.gr-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mute);
+  transition: color 0.3s var(--ease);
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.gr-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--ink);
+  transition: right 0.5s var(--ease);
+}
+
+.gr-link:hover {
+  color: var(--ink);
+}
+
+.gr-link:hover::after {
+  right: 0;
+}
+
 
 /* ── Section dividers ───────────────────────────────────── */
 .sec-divider {
@@ -1377,6 +1608,15 @@ section { position: relative; }
   .pricing { padding: 70px 0; }
   .pr-rate .num { font-size: 44px; }
   .pr-card { padding: 32px 22px; }
+
+  /* Google Reviews */
+  .google-reviews { padding: 70px 0 60px; }
+  .gr-head { margin-bottom: 50px; }
+  .gr-badge { flex-wrap: wrap; justify-content: center; gap: 8px; padding: 10px 14px; }
+  .gr-card { width: 260px; padding: 20px 18px 16px; }
+  .gr-card-text { font-size: 14.5px; }
+  .gr-track { padding: 4px 22px; }
+  .gr-scroll { cursor: default; }
 
   /* Contact */
   .contact-inner { padding: 70px 0 60px; }

@@ -8,7 +8,7 @@ import Intro from "@/components/sections/Intro";
 import Marquee from "@/components/sections/Marquee";
 import Apartment, { APARTMENTS } from "@/components/sections/Apartment";
 import Amenities from "@/components/sections/Amenities";
-import Testimonials from "@/components/sections/Testimonials";
+import GoogleReviews from "@/components/sections/GoogleReviews";
 import Pricing from "@/components/sections/Pricing";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
@@ -36,7 +36,7 @@ export default function Page() {
         <SectionDivider variant="ludo" />
         <Amenities />
         <SectionDivider variant="wreath" />
-        <Testimonials />
+        <GoogleReviews />
         <div className="tone-warm">
           <SectionDivider variant="half-wreath" />
           <Pricing />
