@@ -38,6 +38,10 @@ export default function Hero() {
             style={{ width: "min(360px, 65vw)", height: "auto" }}
           />
         </div>
+        <div className="hero-badge" role="status">
+          <span className="hero-badge-dot" />
+          Now in Murree · Coming soon to Lahore &amp; Islamabad
+        </div>
         <h1 className="hero-cream-heading">A Quiet Place Between the Pines</h1>
         <p className="hero-cream-tagline">
           Ideally located on Murree Expressway above Chaaye Khaana · 45 mins from Islamabad

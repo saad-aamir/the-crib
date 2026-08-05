@@ -6,7 +6,8 @@ import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Intro from "@/components/sections/Intro";
 import Marquee from "@/components/sections/Marquee";
-import Apartment, { APARTMENTS } from "@/components/sections/Apartment";
+import Apartment from "@/components/sections/Apartment";
+import { APARTMENTS } from "@/lib/apartments";
 import Amenities from "@/components/sections/Amenities";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import Pricing from "@/components/sections/Pricing";
@@ -32,6 +33,8 @@ export default function Page() {
           <SectionDivider variant="tree" />
           <Apartment data={APARTMENTS[0]} />
           <Apartment data={APARTMENTS[1]} flip />
+          <Apartment data={APARTMENTS[2]} />
+          <Apartment data={APARTMENTS[3]} flip />
         </section>
         <SectionDivider variant="ludo" />
         <Amenities />

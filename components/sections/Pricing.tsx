@@ -56,6 +56,49 @@ export default function Pricing() {
               Easier on the pocket. Restricted views.
             </div>
           </div>
+          <div className="pr-card reveal reveal-d1">
+            <div className="pr-tag">Sleeps 12</div>
+            <div className="name">
+              The Prestige Suite<em>The mountain-view sanctuary</em>
+            </div>
+            <div className="pr-mute">Three bedrooms · three bathrooms · private terrace</div>
+            <div className="pr-rate">
+              <span className="currency">PKR</span>
+              <span className="num">38,500</span>
+              <span className="per">/ night</span>
+            </div>
+            <ul className="pr-list">
+              <li>Lounge with private terrace & dining area</li>
+              <li>Three mountain & valley balconies</li>
+              <li>Chaye & coffee station · café menu on request</li>
+              <li>Access to the game room · UPS backup</li>
+              <li>Sleeps 12 · three complimentary floor mattresses</li>
+            </ul>
+          </div>
+          <div className="pr-card feature reveal reveal-d2">
+            <div className="pr-tag" style={{ color: "var(--gold-soft)" }}>
+              Sleeps 8
+            </div>
+            <div className="name">
+              The Penthouse Suite
+              <em style={{ color: "var(--gold-soft)" }}>
+                Elevated living with a private rooftop
+              </em>
+            </div>
+            <div className="pr-mute">Two bedrooms · two bathrooms · rooftop terrace</div>
+            <div className="pr-rate">
+              <span className="currency">PKR</span>
+              <span className="num">34,000</span>
+              <span className="per">/ night</span>
+            </div>
+            <ul className="pr-list">
+              <li>Lounge with Netflix & dining area</li>
+              <li>Two balconies onto a private rooftop terrace</li>
+              <li>Chaye & coffee station · fully equipped kitchen</li>
+              <li>Access to the game room · UPS backup</li>
+              <li>Sleeps 8 · two complimentary floor mattresses</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

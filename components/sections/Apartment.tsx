@@ -3,134 +3,7 @@
 import { ReactNode, useState } from "react";
 import Image from "next/image";
 import Magnetic from "../Magnetic";
-
-export type RoomData = {
-  name: string;
-  images: string[];
-};
-
-export type ApartmentData = {
-  num: string;
-  name: string;
-  sub: string;
-  desc: string;
-  descHighlight?: string;
-  features: string[];
-  rooms: RoomData[];
-};
-
-export const APARTMENTS: ApartmentData[] = [
-  {
-    num: "01",
-    name: "The Grand Suite",
-    sub: "The forest-facing retreat",
-    desc:
-      "A three-bedroom corner apartment with a warm, comfortable lounge and a fully equipped kitchen. Floor-to-ceiling windows open toward the pines, filling the space with light and stillness. Designed for slow mornings, quiet evenings, and effortless stays.",
-    descHighlight: "Reserved access to a game and a cinema room.",
-    features: [
-      "3 Bedrooms",
-      "Game room & soon to come private cinema room",
-      "Forest-view balcony",
-      "Chaye and coffee station",
-      "Fully equipped kitchen",
-      "Sleeps 9",
-    ],
-    rooms: [
-      {
-        name: "Lounge",
-        images: [
-          "/apartments/corner/lounge/20260514_152558.jpg",
-          "/apartments/corner/lounge/20260514_152536.jpg",
-          "/apartments/corner/lounge/20260514_152639.jpg",
-        ],
-      },
-      {
-        name: "Room 1",
-        images: [
-          "/apartments/corner/room-1/20260514_154848.jpg",
-          "/apartments/corner/room-1/20260514_154755.jpg",
-          "/apartments/corner/room-1/20260514_155056.jpg",
-        ],
-      },
-      {
-        name: "Room 2",
-        images: [
-          "/apartments/corner/room-2/20260514_161055.jpg",
-          "/apartments/corner/room-2/20260514_161109.jpg",
-          "/apartments/corner/room-2/20260514_161159.jpg",
-        ],
-      },
-      {
-        name: "Room 3",
-        images: [
-          "/apartments/corner/room-3/20260514_163132.jpg",
-          "/apartments/corner/room-3/20260514_163320.jpg",
-          "/apartments/corner/room-3/20260514_163354.jpg",
-        ],
-      },
-      {
-        name: "Balcony",
-        images: [
-          "/apartments/corner/balcony/Balcony-301.jpg",
-          "/apartments/corner/balcony/Balcony-3-301.jpg",
-          "/apartments/corner/balcony/Balcony-5-301.jpg",
-        ],
-      },
-      {
-        name: "Game Room",
-        images: [
-          "/apartments/corner/game-room/20260521_162151.jpg",
-          "/apartments/corner/game-room/20260521_161833.jpg",
-          "/apartments/corner/game-room/20260521_162123.jpg",
-        ],
-      },
-    ],
-  },
-  {
-    num: "02",
-    name: "The Essentials Suite",
-    sub: "Budget option for family stays",
-    desc:
-      "Ideal for smaller families and intimate stays, with thoughtfully designed interiors, a fully furnished lounge, and everything needed for a relaxed getaway.",
-    descHighlight: "Restricted views, but the warmth of the space more than makes up for it. Easier on the pocket.",
-    features: [
-      "2 Bedrooms · 2 Washrooms",
-      "Fully furnished lounge",
-      "Reading nook",
-      "Chaye and coffee station",
-      "Fully equipped kitchen",
-      "Sleeps 6",
-    ],
-    rooms: [
-      {
-        name: "Lounge",
-        images: [
-          "/apartments/budget/lounge/20260514_132411.jpg",
-          "/apartments/budget/lounge/20260514_132208.jpg",
-          "/apartments/budget/lounge/20260514_132254.jpg",
-          "/apartments/budget/lounge/20260514_132307.jpg",
-          "/apartments/budget/lounge/20260514_132414.jpg",
-        ],
-      },
-      {
-        name: "Room 1",
-        images: [
-          "/apartments/budget/room-1/20260514_122411.jpg",
-          "/apartments/budget/room-1/20260514_124312.jpg",
-          "/apartments/budget/room-1/20260514_124638.jpg",
-        ],
-      },
-      {
-        name: "Room 2",
-        images: [
-          "/apartments/budget/room-2/20260514_125450.jpg",
-          "/apartments/budget/room-2/20260514_125410.jpg",
-          "/apartments/budget/room-2/20260514_125429.jpg",
-        ],
-      },
-    ],
-  },
-];
+import type { ApartmentData } from "@/lib/apartments";
 
 function FeatureIcon({ i }: { i: number }) {
   const icons: ReactNode[] = [
@@ -238,7 +111,7 @@ export default function Apartment({ data, flip = false }: { data: ApartmentData;
                 >
                   <Image
                     src={slide.src}
-                    alt=""
+                    alt={`${data.rooms[slide.rIdx].name} of ${data.name} — apartment to rent at The Crib, Murree`}
                     fill
                     sizes="(max-width: 880px) 100vw, 50vw"
                     style={{ objectFit: "cover" }}
@@ -271,7 +144,13 @@ export default function Apartment({ data, flip = false }: { data: ApartmentData;
                   className={`apt-thumb ${i === localIdx ? "active" : ""}`}
                   onClick={() => setLocalIdx(i)}
                 >
-                  <Image src={src} alt="" fill sizes="120px" style={{ objectFit: "cover" }} />
+                  <Image
+                    src={src}
+                    alt={`${activeRoom.name} of ${data.name}, The Crib Murree — photo ${i + 1}`}
+                    fill
+                    sizes="120px"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               ))}
             </div>

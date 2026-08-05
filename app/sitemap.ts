@@ -1,11 +1,13 @@
 import { MetadataRoute } from "next";
 
+const BASE_URL = "https://thecribmurree.com";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://thecribmurree.com",
+      url: BASE_URL,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
   ];
