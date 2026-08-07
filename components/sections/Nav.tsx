@@ -5,9 +5,9 @@ import Logo from "../Logo";
 import Magnetic from "../Magnetic";
 
 const LINKS = [
-  { href: "#apartments", label: "Stays" },
+  { href: "#apartments", label: "Apartments" },
   { href: "#amenities", label: "Comforts" },
-  { href: "#reviews", label: "Guests" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#pricing", label: "Rates" },
 ];
 

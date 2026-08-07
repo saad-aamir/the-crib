@@ -32,7 +32,7 @@ export const APARTMENTS: ApartmentData[] = [
       "Forest-view balcony",
       "Chaye and coffee station",
       "Fully equipped kitchen",
-      "Sleeps 9",
+      "Sleeps 12",
     ],
     rooms: [
       {
@@ -93,12 +93,13 @@ export const APARTMENTS: ApartmentData[] = [
       "Ideal for smaller families and intimate stays, with thoughtfully designed interiors, a fully furnished lounge, and everything needed for a relaxed getaway.",
     descHighlight: "Restricted views, but the warmth of the space more than makes up for it. Easier on the pocket.",
     features: [
-      "2 Bedrooms · 2 Washrooms",
+      "1 Bedroom · 1 Washroom",
       "Fully furnished lounge",
       "Reading nook",
       "Chaye and coffee station",
       "Fully equipped kitchen",
-      "Sleeps 6",
+      "Access to the game room",
+      "Sleeps 4",
     ],
     rooms: [
       {
@@ -117,14 +118,6 @@ export const APARTMENTS: ApartmentData[] = [
           "/apartments/budget/room-1/20260514_122411.jpg",
           "/apartments/budget/room-1/20260514_124312.jpg",
           "/apartments/budget/room-1/20260514_124638.jpg",
-        ],
-      },
-      {
-        name: "Room 2",
-        images: [
-          "/apartments/budget/room-2/20260514_125450.jpg",
-          "/apartments/budget/room-2/20260514_125410.jpg",
-          "/apartments/budget/room-2/20260514_125429.jpg",
         ],
       },
     ],

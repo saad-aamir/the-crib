@@ -104,15 +104,17 @@ export default function GoogleReviews() {
   const onTouchStart = () => { isInteracting.current = true; };
   const onTouchEnd = () => { isInteracting.current = false; };
 
-  if (!data) return null;
+  // Keep the anchor in the DOM even before reviews land (or if the API is down),
+  // otherwise the nav's "Reviews" link has no target and silently does nothing.
+  if (!data) return <div id="reviews" aria-hidden />;
 
   const { rating, total, url, reviews } = data;
 
   return (
-    <section className="google-reviews">
+    <section className="google-reviews" id="reviews">
       <div className="wrap">
         <div className="gr-head">
-          <div className="eyebrow">Chapter 03 · The Guests</div>
+          <div className="eyebrow">Chapter 03 · The Reviews</div>
           <h2 className="gr-heading">In their own words.</h2>
           <div className="gr-badge">
             <GoogleG size={22} />

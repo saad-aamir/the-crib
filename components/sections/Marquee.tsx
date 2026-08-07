@@ -5,7 +5,7 @@ const items = [
   "Game room",
   "Chaye & coffee station",
   "Forest views",
-  "Two bespoke apartments",
+  "Four bespoke apartments",
   "Open 365 days",
 ];
 

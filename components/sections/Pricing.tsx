@@ -12,7 +12,7 @@ export default function Pricing() {
         <div className="pr-grid">
           <div className="pr-card feature reveal reveal-d1">
             <div className="pr-tag" style={{ color: "var(--gold-soft)" }}>
-              Sleeps 9
+              Sleeps 12
             </div>
             <div className="name">
               The Grand Suite
@@ -35,20 +35,21 @@ export default function Pricing() {
             </ul>
           </div>
           <div className="pr-card reveal reveal-d2">
-            <div className="pr-tag">Sleeps 6</div>
+            <div className="pr-tag">Sleeps 4</div>
             <div className="name">
               The Essentials Suite<em>Budget option for family stays</em>
             </div>
-            <div className="pr-mute">Two bedrooms · two washrooms</div>
+            <div className="pr-mute">One bedroom · one washroom</div>
             <div className="pr-rate">
               <span className="currency">PKR</span>
-              <span className="num">25,000</span>
+              <span className="num">20,000</span>
               <span className="per">/ night</span>
             </div>
             <ul className="pr-list">
               <li>Fully furnished lounge</li>
               <li>Reading nook & private balcony</li>
               <li>Chaye & coffee station · fully equipped kitchen</li>
+              <li>Access to the game room</li>
               <li>Concierge & daily housekeeping</li>
               <li>High-speed Wi-Fi</li>
             </ul>
