@@ -42,7 +42,7 @@ export default function Pricing() {
             <div className="pr-mute">One bedroom · one washroom</div>
             <div className="pr-rate">
               <span className="currency">PKR</span>
-              <span className="num">20,000</span>
+              <span className="num">25,000</span>
               <span className="per">/ night</span>
             </div>
             <ul className="pr-list">
